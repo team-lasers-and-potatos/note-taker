@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
   def index
     render json: {status: 200, message: 'API is up and running.', name: 'Joseph Gefroh'}
   end
+
+  def notes
+  end
 end

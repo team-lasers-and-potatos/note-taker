@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  
-  root 'application#index'
+
+
+  get 'welcome/index'
+  get '/notes', to: 'welcome#notes'
+  root 'welcome#index'
 end
