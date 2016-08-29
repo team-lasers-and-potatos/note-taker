@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap/theme';
 
 /* mixins, variables, etc. */
 
@@ -8,12 +9,13 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 section {
   overflow: auto;
 }
+
 
 textarea {
   resize: vertical;
@@ -70,6 +72,12 @@ p {
   }
 }
 
+.dropdown {
+  font-size: 1.25em;
+  float: right;
+  color: white;
+}
+
 /* footer */
 
 footer {
@@ -95,4 +103,12 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
 }
