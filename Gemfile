@@ -10,6 +10,7 @@ gem 'responders', '~> 2.0'
 gem 'unicorn'
 gem 'rails_12factor', group: :production
 gem 'rack-cors', '0.4.0'
+gem 'turbolinks'
 
 group :development do
   gem 'spring'
