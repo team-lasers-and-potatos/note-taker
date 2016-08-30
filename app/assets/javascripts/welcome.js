@@ -1,7 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-//= require jquery
-//= require jquery.tubrolinks
-//= require jquery_ujs
-//= require bootstrap/dropdown
-//= require turbolinks
+<<<<<<< HEAD
+
+=======
+console.info("HEY");
+>>>>>>> a890fe397f2cf8692b33442592ff7250fd279793
