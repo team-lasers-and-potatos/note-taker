@@ -3,9 +3,13 @@
   <% @notes.each do |f| %>
     <div class="col-md-4">
       <div class="bord">
-        <h2><%= f.title %></h2>
-        <p><%= f.body %><p>
-        <li><%= link_to "edit", edit_note_path(@notes)  %></li>
+        <h2><%= link_to f.title, note_path(f.id) %></h2>
+        <p><%= link_to 'Show', note_path(f.id) %></p>
+        <p><%= f.body %></p>
+        <ul>
+          <li><%= link_to "edit" %></li>
+
+        </ul>
       </div>
     </div>
   <% end %>

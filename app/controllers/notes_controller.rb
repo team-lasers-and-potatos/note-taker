@@ -15,9 +15,15 @@ class NotesController < ApplicationController
   end
 
   def show
+    @notes = Note.find_by("id" => params[:id])
   end
 
   def edit
+    @notes = Note.find_by("id" => params[:id])
+  end
+
+  def update
+    @notes = Note.update("id" => params[:id], note_params)
   end
 
   def destroy
@@ -26,6 +32,6 @@ class NotesController < ApplicationController
 
   private
   def note_params
-   params.require(:note).permit(:title, :body)
+   params.require(:note).permit(:title, :body, :id)
   end
 end
