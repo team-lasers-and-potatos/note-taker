@@ -15,7 +15,7 @@
  */
  @import "bootstrap";
  @import 'bootstrap/theme';
- @import "bootstrap-sprockets"; 
+ @import "bootstrap-sprockets";
 
 
  /* mixins, variables, etc. */
@@ -127,4 +127,16 @@
 
  .alert-notice {
    @extend .alert-info;
+ }
+
+ .bord {
+	border: #cdcdcd medium solid;
+	border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
  }

@@ -1,11 +1,12 @@
 <h1>Notes</h1>
-<div class="container">
-  <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <% @notes.each do |f| %>
-          <h2><%= f.title %></h2>
-          <p><%= f.body %><p>
-        <% end %>
-        </div>
-  </div>
+<div class="row">
+  <% @notes.each do |f| %>
+    <div class="col-md-4">
+      <div class="bord">
+        <h2><%= f.title %></h2>
+        <p><%= f.body %><p>
+        <li><%= link_to "edit", edit_note_path(@notes)  %></li>
+      </div>
+    </div>
+  <% end %>
 </div>
