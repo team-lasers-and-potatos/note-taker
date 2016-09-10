@@ -6,8 +6,9 @@
         <div class="rotate-1 yellow-bg">
           <h2><%= @notes.title %></h2>
           <p><%= @notes.body %></p>
-          <p><%= link_to "Edit" %></p>
+          <p><%= link_to "Edit", edit_note_path(@notes.id) %></p>
         </div>
       </li>
     </ul>
   </div>
+</div>
