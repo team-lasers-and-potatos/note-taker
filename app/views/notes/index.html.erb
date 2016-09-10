@@ -10,9 +10,10 @@
               <h2><%= link_to f.title, note_path(f.id) %></h2>
               <p><%= f.body %></p>
               <p><%= link_to "edit", edit_note_path(f.id) %></p>
+              <small class="topright"><%= current_user.email %></small>
             </div>
           </li>
     </ul>
   </div>
 </div>
-    <% end %>
+<% end %>

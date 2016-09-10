@@ -9,6 +9,8 @@
         <%= f.label :body %>
         <%= f.text_area :body, class: 'form-control' %>
         <br>
+        <%= f.hidden_field :user_id %>
+        
         <%= f.submit "Create Note", class: 'btn btn-primary'  %>
 
         <% end %>

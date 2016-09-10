@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    @notes = Note.all
+    @notes = Note.where(user_id:current_user.id)
   end
 
   def new
@@ -9,6 +9,7 @@ class NotesController < ApplicationController
 
   def create
     @notes = Note.new(note_params)
+    @notes.user_id = current_user.id
     if @notes.save && !@notes.nil?
       redirect_to notes_path
     end
