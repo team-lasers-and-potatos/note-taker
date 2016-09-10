@@ -23,7 +23,12 @@ class NotesController < ApplicationController
   end
 
   def update
-    @notes = Note.update("id" => params[:id], note_params)
+    @notes = Note.find_by("id" => params[:id])
+    if @notes.update(note_params)
+      redirect_to @notes
+    else
+      redirect_to notes_path
+    end
   end
 
   def destroy
