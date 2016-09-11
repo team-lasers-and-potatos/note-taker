@@ -184,8 +184,23 @@ div.rotate-2 {
 }
 
 .yellow-bg {
-  background-color: #f8ac59;
+  /* background-color: #f8ac59; */
+  background-color: #ffff00;
   color: #ffffff;
+}
+
+.editnote {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  float: left;
+}
+
+.deletenote {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  float: right;
 }
 
 ul.notes li div {

@@ -9,7 +9,8 @@
             <div class="rotate-<%= b[1 + rand(2)] %> <%= r[1 + rand(3)] %>-bg">
               <h2><%= link_to f.title, note_path(f.id) %></h2>
               <p><%= f.body %></p>
-              <p><%= link_to "edit", edit_note_path(f.id) %></p>
+              <p class="editnote"><%= link_to "edit", edit_note_path(f.id) %></p>
+              <p class="deletenote"><%= link_to 'Delete', note_path(f.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <small class="topright"><%= current_user.email %></small>
             </div>
           </li>

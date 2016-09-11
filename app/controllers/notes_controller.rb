@@ -33,7 +33,8 @@ class NotesController < ApplicationController
   end
 
   def destroy
-    @notes = Note.destroy
+    @notes = Note.destroy(params[:id])
+    redirect_to @notes
   end
 
   private
