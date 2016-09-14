@@ -6,11 +6,11 @@
           <div class="rotate-2 yellow-bg">
             <%= form_for(@notes) do |f| %>
 
-              <%= f.label :title %>
-              <%= f.text_field :title %>
+              <p><%= f.label :title %></p>
+              <%= f.text_field :title, class: 'form-control txt' %>
 
-              <%= f.label :body %>
-              <%= f.text_area :body %>
+              <p><%= f.label :body %></p>
+              <%= f.text_area :body, class: 'form-control txt' %>
               <br>
               <%= f.hidden_field :user_id %>
 

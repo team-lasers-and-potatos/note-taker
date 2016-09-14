@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @notes = Note.where(user_id:current_user.id)
   end
