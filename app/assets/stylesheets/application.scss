@@ -54,12 +54,12 @@
  }
 
  .hero-unit h1 {
-   color: #FFFFFF;
+   color: white;
    font-size: 60px;
    letter-spacing: -1px;
    line-height: 1;
    margin-bottom: 0;
-   opacity: .5;
+   font-weight:bold;
  }
 
  .darken {
@@ -84,7 +84,8 @@
 
  h1 {
    font-size: 3em;
-   letter-spacing: -2px;
+   text-transform: uppercase;
+   letter-spacing: -1px;
    margin-bottom: 30px;
    text-align: center;
  }
@@ -112,7 +113,7 @@
    color: white;
    text-transform: uppercase;
    letter-spacing: -1px;
-   padding-top: 9px;
+   padding-top: 8px;
    font-weight: bold;
    &:hover {
      color: white;
