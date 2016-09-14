@@ -46,6 +46,36 @@
    }
  }
 
+ .hero-unit {
+   background-image:url('https://static.pexels.com/photos/6471/woman-hand-smartphone-desk.jpg');
+   background-size:cover;
+   background-color: #EEEEEE;
+   height: 750px;
+ }
+
+ .hero-unit h1 {
+   color: #FFFFFF;
+   font-size: 60px;
+   letter-spacing: -1px;
+   line-height: 1;
+   margin-bottom: 0;
+   opacity: .5;
+ }
+
+ .darken {
+   background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://static.pexels.com/photos/6471/woman-hand-smartphone-desk.jpg');
+ }
+
+ .hero-unit h2 {
+   font-size: 25px;
+   color: #FFFFFF;
+ }
+
  /* typography */
 
  h1, h2, h3, h4, h5, h6 {
@@ -65,7 +95,7 @@
    margin-bottom: 30px;
    text-align: center;
    font-weight: normal;
-   color: $gray-light;
+   color: black;
  }
 
  p {
