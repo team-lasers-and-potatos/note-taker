@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
  @import "bootstrap";
  @import 'bootstrap/theme';
@@ -50,7 +51,7 @@
    background-image:url('https://static.pexels.com/photos/6471/woman-hand-smartphone-desk.jpg');
    background-size:cover;
    background-color: #EEEEEE;
-   height: 750px;
+   height: 550px;
  }
 
  .hero-unit h1 {

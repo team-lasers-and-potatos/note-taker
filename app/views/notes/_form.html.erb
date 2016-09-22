@@ -11,8 +11,13 @@
 
               <p><%= f.label :body %></p>
               <%= f.text_area :body, class: 'form-control txt' %>
-              <br>
+
               <%= f.hidden_field :user_id %>
+
+              <p><%= f.label :duedate %></p>
+              <%= f.date_field :duedate, type: 'date', class: 'form-control txt' %>
+
+         <!--    <p><b>Date</b><input type="text" id="datepicker" class="form-control txt"></p> -->
 
               <%= f.submit "Create Note", class: 'btn btn-primary'  %>
 

@@ -19,6 +19,7 @@ class NotesController < ApplicationController
 
   def show
     @notes = Note.find_by("id" => params[:id])
+    @notes.duedate.strftime("%m/%d/%Y")
   end
 
   def edit
@@ -41,6 +42,6 @@ class NotesController < ApplicationController
 
   private
   def note_params
-   params.require(:note).permit(:title, :body, :id)
+   params.require(:note).permit(:title, :body, :duedate, :id)
   end
 end
