@@ -1,5 +1,5 @@
 <% b = [0, 1, 2] %>
-<% r = ['lazur', 'red', 'yellow', 'navy']  %>
+<% r = ['lazur', 'orange', 'yellow', 'navy']  %>
 <h1>Notes</h1>
 <% @notes.each do |f| %>
 <div class="col-md-4">
@@ -9,7 +9,11 @@
             <div class="rotate-<%= b[1 + rand(2)] %> <%= r[1 + rand(3)] %>-bg">
               <h2><%= link_to f.title, note_path(f.id) %></h2>
               <p><%= f.body %></p>
-              <p><%= f.duedate %></p>
+              <% if f.duedate > Date.today %>
+                <p style="color: blue;">Due: <%= f.duedate.strftime("%A %B %d, %Y") %></p>
+              <% else %>
+                <p style="color: red;">Due: <%= f.duedate.strftime("%A %B %d, %Y") %></p>
+              <% end %>
               <p class="editnote"><%= link_to "edit", edit_note_path(f.id) %></p>
               <p class="deletenote"><%= link_to 'Delete', note_path(f.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <small class="topright"><%= current_user.email %></small>

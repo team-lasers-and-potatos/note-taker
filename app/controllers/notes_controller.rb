@@ -19,7 +19,6 @@ class NotesController < ApplicationController
 
   def show
     @notes = Note.find_by("id" => params[:id])
-    @notes.duedate.strftime("%m/%d/%Y")
   end
 
   def edit

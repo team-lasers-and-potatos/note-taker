@@ -6,7 +6,11 @@
         <div class="rotate-1 yellow-bg">
           <h2><%= @notes.title %></h2>
           <p><%= @notes.body %></p>
-          <p><%= @notes.duedate %></p>
+          <% if @notes.duedate > Date.today %>
+            <p style="color: blue;">Due: <%= @notes.duedate.strftime("%A %B %d, %Y") %></p>
+          <% else %>
+            <p style="color: red;">Due: <%= @notes.duedate.strftime("%A %B %d, %Y") %></p>
+          <% end %>
           <p><%= link_to "Edit", edit_note_path(@notes.id) %></p>
         </div>
       </li>
